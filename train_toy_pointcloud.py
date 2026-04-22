@@ -157,8 +157,8 @@ def main():     #主函数
     print("Using device:", device)
 
     #建数据集（训练集、测试集各建一份）
-    train_set = ToyPointCloudDataset(split="train", samples_per_class=200, n_points=256)
-    test_set = ToyPointCloudDataset(split="test", samples_per_class=200, n_points=256)
+    train_set = ToyPointCloudDataset(split="train", samples_per_class=200, n_points=32)
+    test_set = ToyPointCloudDataset(split="test", samples_per_class=200, n_points=32)
 
     train_loader = DataLoader(train_set, batch_size=32, shuffle=True, num_workers=0)
     test_loader = DataLoader(test_set, batch_size=64, shuffle=False, num_workers=0)
